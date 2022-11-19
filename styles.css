@@ -23,6 +23,7 @@ body::after {
   background-color: #f4f4f4;
   opacity: 0.8;
   z-index: -1;
+  min-height: 100vh;
 }
 
 main {
@@ -132,4 +133,45 @@ main {
   font-size: 14px;
   margin-top: 10px;
   text-transform: capitalize;
+}
+
+/* mobile */
+@media screen and (max-width: 780px) {
+  main {
+    max-width: 600px;
+  }
+
+  .food-tray {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .meal-specs {
+
+    /* display: flex;
+   flex-direction: column; */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* margin: 0 auto; */
+    /* padding-left: 50px; */
+    padding: 0 20px;
+
+  }
+
+  .food-pic{
+   width: 100%;
+  }
+
+  .name-price {
+   margin-top: 10px;
+   width: 100%;
+  }
+
+  .name-price::after {
+width: 100%;  }
+
+  .food-info{
+   width: 100%;
+  }
+
 }
