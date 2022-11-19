@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  bottom: 0;
+  box-sizing: border-box;
+}
+
+body {
+ background-color: rgba(121, 21, 21, 0.555);
+  background-image: url(./bgImage2.jpg);
+  background-size: contain;
+  position: relative;
+  isolation: isolate;
+}
+
+body::after {
+ content: '';
+ inset: 0;
+ position: absolute;
+ background-color: #f4f4f4;
+ opacity: .8;
+ z-index: -1;
+}
+
+main {
+}
