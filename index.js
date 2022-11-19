@@ -77,14 +77,33 @@ const foodArray = [
     foodName: 'Jollof rice and chicken ',
     price: '14.00',
     desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.Numquam magni corporis recusandae ipsa, commodi exercitationem corrupti est eum fugiat dolor itaque dolorum quis ex velit eius quibusdam labore. Dolorum, corporis!',
-    category: 'breakfast',
+    category: 'dinner',
   },
 ];
 
 const foodTray = document.querySelector('.food-tray');
 
+const mealBtns = document.querySelectorAll('.meal-btn');
+
 window.addEventListener('DOMContentLoaded', () => {
   displayFood(foodArray);
+});
+
+mealBtns.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    const mealType = e.currentTarget.dataset.id;
+    const specificMeal = foodArray.filter((menuItem) => {
+      // console.log(menuItem.category);
+      if (menuItem.category === mealType) {
+        return menuItem;
+      }
+    });
+    if (mealType === 'all') {
+      displayFood(foodArray);
+    } else {
+      displayFood(specificMeal);
+    }
+  });
 });
 
 function displayFood(menuItems) {
