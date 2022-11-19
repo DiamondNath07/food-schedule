@@ -5,7 +5,7 @@
 }
 
 body {
- background-color: rgba(121, 21, 21, 0.555);
+  background-color: rgba(121, 21, 21, 0.555);
   background-image: url(./bgImage2.jpg);
   background-size: contain;
   position: relative;
@@ -13,13 +13,60 @@ body {
 }
 
 body::after {
- content: '';
- inset: 0;
- position: absolute;
- background-color: #f4f4f4;
- opacity: .8;
- z-index: -1;
+  content: '';
+  inset: 0;
+  position: absolute;
+  background-color: #f4f4f4;
+  opacity: 0.8;
+  z-index: -1;
 }
 
 main {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.heading {
+  padding-top: 100px;
+  text-align: center;
+}
+.food-list {
+  font-family: 'Kalam', cursive;
+  color: #c59d5f;
+  position: relative;
+}
+
+.food-list::after {
+  content: '';
+  position: absolute;
+  top: 45px;
+  right: 520px;
+  background-color: #c59d5f;
+  width: 60px;
+  height: 3px;
+}
+
+.foodbtns {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.meal-btn {
+ padding: 5px 10px;
+ background-color: #fff;
+ color: #c59d5f;
+ font-size: 16px;
+ border: none;
+ box-shadow: 0 0 7px #c59d5f ;
+ border-radius: 5px;
+  margin:0 2px;
+
+ transition: all .5s ease-in-out;
+}
+
+.meal-btn:hover{
+ background-color: #c59d5f;
+ color: #fff;
+ box-shadow: none ;
+
 }
