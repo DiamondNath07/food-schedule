@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --font-text: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
   background-color: rgba(121, 21, 21, 0.555);
   background-image: url(./bgImage2.jpg);
@@ -27,7 +31,7 @@ main {
 }
 
 .heading {
-  padding-top: 100px;
+  padding-top: 50px;
   text-align: center;
 }
 .food-list {
@@ -41,6 +45,7 @@ main {
   position: absolute;
   top: 45px;
   right: 520px;
+
   background-color: #c59d5f;
   width: 60px;
   height: 3px;
@@ -48,7 +53,7 @@ main {
 
 .foodbtns {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .meal-btn {
@@ -56,6 +61,7 @@ main {
   background-color: #fff;
   color: #c59d5f;
   font-size: 16px;
+  font-family: var(--font-text);
   border: none;
   box-shadow: 0 0 7px #c59d5f;
   border-radius: 5px;
@@ -75,7 +81,7 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .meal-specs {
@@ -85,12 +91,44 @@ main {
 
 .food-pic {
   grid-column: span 2;
-  width: 250px;
+  width: 230px;
   border-radius: 10px;
   box-shadow: 0 0 15px #3e3e3e;
-
 }
 
 .description {
- grid-column: span 2;
+  grid-column: span 2;
+}
+
+.name-price {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.food-name,
+.food-price {
+  font-family: var(--font-text);
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.name-price::after {
+  content: '';
+  top: 28px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #c59d5f;
+  position: absolute;
+  width: 280px;
+  height: 2px;
+}
+
+.food-info {
+  font-family: var(--font-text);
+  font-size: 14px;
+  margin-top: 10px;
+  text-transform: capitalize;
 }
